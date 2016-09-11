@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3D旋转魔方</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			body{
+				background: url(img/8.jpg) 0 0 no-repeat;
+				background-size: cover;
+				-webkit-perspective: 1000px;/*视距*/
+			}
+			.wrap{
+				position: relative;
+				width: 200px;
+				height: 200px;
+				margin: 200px auto 0;
+				/*border: 4px solid red;*/
+				-webkit-transform-style: preserve-3d;/*子元素具有3D属性*/
+/*				-webkit-transform: rotateX(13deg);*/
+				-webkit-animation: run 10s linear infinite;
+			}
+			ul{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				border: 1px solid blue;
+				-webkit-transform-style: preserve-3d;
+			}
+			ul li{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			ul li:nth-child(1){
+				background: url(img/1.jpg) 0 0 no-repeat;
+				background-size: cover;
+				/*z-index: 10;*/
+				-webkit-transform: translateZ(50px);
+			}
+			ul li:nth-child(2){
+				background: url(img/2.jpg) 0 0 no-repeat;
+				background-size: cover;
+				/*z-index: 10;*/
+				-webkit-transform: rotateY(90deg) translateZ(50px);
+			}
+			ul li:nth-child(3){
+				background: url(img/3.jpg) 0 0 no-repeat;
+				background-size: cover;
+				/*z-index: 10;*/
+				-webkit-transform: rotateY(180deg) translateZ(50px);
+			}
+			ul li:nth-child(4){
+				background: url(img/4.jpg) 0 0 no-repeat;
+				background-size: cover;
+				/*z-index: 10;*/
+				-webkit-transform: rotateY(270deg) translateZ(50px);
+			}
+			ul li:nth-child(5){
+				background: url(img/5.jpg) 0 0 no-repeat;
+				background-size: cover;
+				/*z-index: 10;*/
+				-webkit-transform: rotateX(-90deg) translateZ(50px);
+			}
+			ul li:nth-child(6){
+				background: url(img/6.jpg) 0 0 no-repeat;
+				background-size: cover;
+				z-index: 10;
+				-webkit-transform: rotateX(90deg) translateZ(50px);
+			}
+			ol{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*border: 1px solid blue;*/
+				-webkit-transform-style: preserve-3d;
+			}
+			ol li{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: white;
+				opacity: 0.4;
+				filter: alpha(opacity=40);/*兼容IE*/
+				-webkit-transition: all 1s ease-in-out;
+			}
+			ol li:nth-child(1){
+				-webkit-transform: translateZ(100px);
+			}
+			.wrap:hover ol li:nth-child(1){
+				-webkit-transform: translateZ(200px);
+			}
+			ol li:nth-child(2){
+				-webkit-transform: rotateY(90deg) translateZ(100px);
+			}
+			.wrap:hover ol li:nth-child(2){
+				-webkit-transform: rotateY(90deg) translateZ(200px);
+			}
+			ol li:nth-child(3){
+				-webkit-transform: rotateY(180deg) translateZ(100px);
+			}
+			.wrap:hover ol li:nth-child(3){
+				-webkit-transform: rotateY(180deg) translateZ(200px);
+			}
+			ol li:nth-child(4){
+				-webkit-transform: rotateY(270deg) translateZ(100px);
+			}
+			.wrap:hover ol li:nth-child(4){
+				-webkit-transform: rotateY(270deg) translateZ(200px);
+			}
+			ol li:nth-child(5){
+				-webkit-transform: rotateX(-90deg) translateZ(100px);
+			}
+			.wrap:hover ol li:nth-child(5){
+				-webkit-transform: rotateX(-90deg) translateZ(200px);
+			}
+			ol li:nth-child(6){
+				-webkit-transform: rotateX(90deg) translateZ(100px);
+			}
+			.wrap:hover ol li:nth-child(6){
+				-webkit-transform: rotateX(90deg) translateZ(200px);
+			}
+			@-webkit-keyframes run{
+				0%{-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+				25%{-webkit-transform: rotateX(360deg) rotateY(180deg) rotateZ(180deg);}
+				50%{-webkit-transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg);}
+				75%{-webkit-transform: rotateX(-180deg) rotateY(0deg) rotateZ(180deg);}
+				100%{-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+		<script>
+			
+		</script>
+	</body>
+</html>
